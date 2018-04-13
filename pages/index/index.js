@@ -7,14 +7,16 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    //为了兼容
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
+  //事件处理函数，点击头像后跳转页面wx.navigateTo
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
+  //页面渲染函数
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
